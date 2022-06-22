@@ -1,0 +1,516 @@
+@import "common-styles.scss";
+@import "forms.scss";
+
+//#######################################################################################################
+.content {
+  background: #e5e5e5;
+}
+
+//#######################################################################################################
+.nosso {
+  background: #111111;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 60px 0 80px 0;
+    @media (max-width: $md1) {
+      padding: 40px 0 40px 0;
+    }
+    @media (max-width: 1180px) {
+      padding: 40px 10px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+  }
+
+  &__header {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #b2b2b2;
+    @media (max-width: $md1) {
+      @include adaptive-value("font-size", 24, 18);
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.1s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    @media (max-width: $md1) {
+      @include adaptive-value("font-size", 64, 26);
+      @include adaptive-value("line-height", 72, 24);
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.2s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+//#######################################################################################################
+.nosso-background {
+  background: #111111;
+  height: 310px;
+  @media (max-width: $md3) {
+    display: none;
+  }
+}
+
+//#######################################################################################################
+.nosso-online {
+  margin: -16% 0 0 0;
+  @media (max-width: $md1) {
+    margin: -18% 0 0 0;
+  }
+  @media (max-width: 1440px) {
+    margin: -21% 0 0 0;
+  }
+  @media (max-width: 1200px) {
+    margin: -25% 0 0 0;
+    padding: 0 10px;
+  }
+  @media (max-width: 1080px) {
+    margin: -30% 0 0 0;
+  }
+  @media (max-width: 840px) {
+    margin: -35% 0 0 0;
+  }
+  @media (max-width: $md3) {
+    margin: 0;
+    background: #111111;
+  }
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: $md3) {
+      display: block;
+    }
+  }
+
+  &__column {
+    &:first-child {
+      flex: 1 1 39.99%;
+      background: #000000;
+      border-radius: 5px 0px 0px 5px;
+    }
+    &:last-child {
+      flex: 1 1 60.01%;
+      background: #ffffff;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+  }
+
+  &__items {
+    padding: 60px 0 40px 60px;
+    @media (max-width: $md2) {
+      padding: 40px 0 60px 40px;
+    }
+    @media (max-width: $md3) {
+      padding: 30px 10px 50px 30px;
+    }
+    @media (max-width: $md4) {
+      padding: 30px 10px 40px 30px;
+    }
+  }
+
+  &__text {
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 0 0 60px 0;
+    @media (max-width: $md2) {
+      padding: 0 0 50px 0;
+    }
+    @media (max-width: $md3) {
+      padding: 0 0 40px 0;
+    }
+    @media (max-width: $md4) {
+      padding: 0 0 30px 0;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.3s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__contato-item {
+    display: flex;
+    max-width: 200px;
+    span {
+      display: inline-block;
+      font-family: $roboto;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #cccccc;
+    }
+    padding: 0 0 32px 0;
+    @media (max-width: $md2) {
+      padding: 0 0 25px 0;
+    }
+    @media (max-width: $md3) {
+      max-width: none;
+      padding: 0 0 20px 0;
+    }
+    @media (max-width: $md4) {
+      padding: 0 0 10px 0;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.3s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    padding: 1px 10px 0 0;
+  }
+
+  &__social {
+    padding: 28px 0 0 28px;
+    max-width: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $md2) {
+      padding: 24px 0 0 28px;
+    }
+    @media (max-width: $md3) {
+      padding: 18px 0 0 28px;
+    }
+    @media (max-width: $md4) {
+      padding: 12px 0 0 28px;
+    }
+  }
+
+  &__social-item {
+    transition: all 1.2s ease 0.3s;
+    transform: scale(0);
+    &._active {
+      transform: scale(1);
+    }
+    &:hover {
+      transition: all 0.5s ease 0s;
+      opacity: 0.7;
+    }
+  }
+
+  &__sign {
+    padding: 0 0 40px 40px;
+    @media (max-width: $md2) {
+      padding: 35px 0 40px 40px;
+    }
+    @media (max-width: $md3) {
+      padding: 0 0 40px 10px;
+    }
+  }
+}
+
+.nosso-form {
+  padding: 60px 60px 0 60px;
+  @media (max-width: $md2) {
+    padding: 40px 40px 0 40px;
+  }
+  @media (max-width: $md3) {
+    padding: 30px 30px 0 30px;
+  }
+  @media (max-width: $md4) {
+    padding: 20px 20px 0 20px;
+  }
+
+  &__body {
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    max-width: 280px;
+    width: 100%;
+    @media (max-width: 1170px) {
+      &:nth-child(1) {
+        padding: 0 5px 0 0;
+      }
+      &:nth-child(2) {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+
+  &__item {
+    &:nth-child(2) {
+      padding: 0 0 20px 0;
+    }
+    &:nth-child(3) {
+      padding: 0 0 20px 0;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111;
+    padding: 0 0 4px 0;
+    @media (max-width: 650px) {
+      padding: 0 0 1px 0;
+    }
+    transition: all 1.2s ease 0.3s;
+    transform: scale(0);
+    &._active {
+      transform: scale(1);
+    }
+    @media (max-width: $md3) {
+      transition: all 1.2s ease 0s;
+    }
+  }
+
+  &__button {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.3s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__sign {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px 40px 0;
+    margin: -32px 0 0 0;
+    @media (max-width: $md2) {
+      margin: -12px 0 0 0;
+    }
+    @media (max-width: $md3) {
+      padding: 20px 10px 40px 0;
+      margin: 0;
+    }
+  }
+}
+
+//#######################################################################################################
+.locais {
+  background: #e5e5e5;
+
+  &__container {
+    padding: 120px 0;
+    margin: 0 auto;
+    max-width: 1160px;
+    @media (max-width: $md1) {
+      padding: 100px 0;
+    }
+    @media (max-width: 1440px) {
+      padding: 80px 0;
+    }
+    @media (max-width: 1200px) {
+      padding: 80px 10px;
+    }
+    @media (max-width: $md2) {
+      padding: 60px 10px;
+    }
+    @media (max-width: $md3) {
+      padding: 50px 10px;
+    }
+    @media (max-width: $md4) {
+      padding: 40px 10px;
+    }
+  }
+
+  &__title {
+    padding: 0 0 60px 0;
+    @media (max-width: $md1) {
+      @include adaptive-value("font-size", 64, 26);
+      @include adaptive-value("line-height", 72, 24);
+      padding: 0 0 50px 0;
+    }
+    @media (max-width: $md2) {
+      padding: 0 0 40px 0;
+    }
+    @media (max-width: $md3) {
+      padding: 0 0 30px 0;
+    }
+    @media (max-width: $md4) {
+      padding: 0 0 20px 0;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md2) {
+      display: block;
+    }
+  }
+
+  &__column {
+    &:nth-child(1) {
+      flex: 1 1 50%;
+      padding: 0 10px 0 0;
+      @media (max-width: $md2) {
+        padding: 0 0 30px 0;
+      }
+    }
+    &:nth-child(2) {
+      flex: 1 1 50%;
+      padding: 0 0 0 10px;
+      @media (max-width: $md2) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__body {
+  }
+
+  &__map {
+    padding: 0 0 44.83% 0;
+    transform: scale(0.8);
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: scale(1);
+    }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 0.4px 63.9px -9px rgba(0, 0, 0, 0.17),
+        0px 5px 87px -9px rgba(0, 0, 0, 0.34);
+    }
+    cursor: pointer;
+  }
+
+  &__item {
+    background: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 5px 5px;
+    padding: 32px 10px 32px 32px;
+    @media (max-width: $md4) {
+      padding: 20px 10px 20px 20px;
+    }
+  }
+
+  &__city {
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+    padding: 0 0 32px 0;
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 8px;
+      background: #ffbb00;
+      margin: 0 12px 6px 0;
+    }
+    @media (max-width: $md4) {
+      font-size: 30px;
+      padding: 0 0 25px 0;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    max-width: 380px;
+    padding: 0 0 32px 28px;
+    @media (max-width: $md4) {
+      padding: 0 0 25px 10px;
+    }
+  }
+
+  &__addrres {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #595959;
+    max-width: 145px;
+    border-left: 2px solid #ededed;
+    padding: 0 0 0 5px;
+    @media (max-width: $md4) {
+      line-height: 26px;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__time {
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    span {
+      display: inline-block;
+      padding: 0 0 0 4px;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}

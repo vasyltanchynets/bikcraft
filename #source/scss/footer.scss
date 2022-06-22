@@ -1,0 +1,233 @@
+.footer {
+  background: #000000;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 62px 0 32px 0;
+    @media (max-width: $md2) {
+      padding: 42px 0 32px 0;
+    }
+  }
+
+  &__body {
+    max-width: 991px;
+    @media (max-width: 1270px) {
+      max-width: 850px;
+      padding: 0 0 0 40px;
+    }
+    @media (max-width: 880px) {
+      padding: 0 40px 0 40px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md3) {
+      flex-direction: column;
+      justify-content: flex-start;
+      max-width: 230px;
+    }
+  }
+
+  &__column {
+  }
+
+  &__logo {
+    @media (max-width: $md3) {
+      display: inline-block;
+      padding: 0 0 30px 0;
+    }
+    display: flex;
+    transform: scale(0);
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: scale(1);
+    }
+    @media (max-width: $md2) {
+      opacity: 0;
+      transform: translate(0, 120%);
+      &._active {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  &__contato {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $md3) {
+      padding: 0 0 30px 0;
+    }
+  }
+
+  &__title {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 0 32px 0;
+    @media (max-width: $md2) {
+      padding: 0 0 25px 0;
+    }
+    @media (max-width: $md3) {
+      font-size: 23px;
+      padding: 0 0 10px 0;
+    }
+    transform: scale(0);
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: scale(1);
+    }
+    @media (max-width: $md2) {
+      opacity: 0;
+      transform: translate(0, 120%);
+      &._active {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  &__contacts {
+  }
+
+  &__item-contact {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.015em;
+    color: #b2b2b2;
+    @media (max-width: $md2) {
+      line-height: 30px;
+    }
+    @media (max-width: $md3) {
+      font-size: 17px;
+      line-height: 22px;
+    }
+    opacity: 0;
+    transform: translate(0, 120%);
+    transition: all 1.2s ease 0s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__mail {
+    display: flex;
+    &:hover {
+      transition: all 0.5s ease 0s;
+      color: #ffffff;
+    }
+  }
+
+  &__line {
+    height: 2px;
+    background-color: #111111;
+    width: 140%;
+    margin: 12px 0 12px 0;
+    @media (max-width: 1270px) {
+      width: 120%;
+    }
+    @media (max-width: $md2) {
+      margin: 10px 0 10px 0;
+    }
+    @media (max-width: 880px) {
+      width: 110%;
+    }
+    @media (max-width: $md3) {
+      margin: 8px 0 8px 0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 160px;
+    padding: 10px 0 0 0;
+    @media (max-width: $md3) {
+      padding: 5px 0 0 0;
+    }
+  }
+
+  &__media {
+    transform: scale(0);
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: scale(1);
+    }
+    &:hover {
+      transition: all 0.5s ease 0s;
+      opacity: 0.7;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    align-self: flex-start;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.015em;
+    color: #b2b2b2;
+    @media (max-width: $md2) {
+      line-height: 32px;
+    }
+    @media (max-width: $md3) {
+      font-size: 17px;
+      line-height: 26px;
+    }
+    opacity: 0;
+    transform: translate(0, 120%);
+    transition: all 1.2s ease 0s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    &:hover {
+      transition: all 0.5s ease 0s;
+      color: #ffffff;
+    }
+  }
+
+  &__copy {
+    padding: 80px 0 0 0;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.015em;
+    color: #9c9c9c;
+    @media (max-width: $md2) {
+      padding: 50px 0 0 0;
+    }
+    @media (max-width: $md3) {
+      padding: 30px 0 0 0;
+      font-size: 17px;
+      line-height: 17px;
+    }
+    transform: translate(0, 100%);
+    opacity: 0;
+    transition: all 1.2s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}

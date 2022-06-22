@@ -1,0 +1,127 @@
+@import "nullstyles.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+
+$poppins: "Poppins";
+$roboto: "Roboto";
+$merriweather: "Merriweather";
+
+$maxWidth: 1600;
+@mixin adaptive-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  #{$property}: calc(
+    #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+  );
+}
+
+$minwidth: 320px;
+$md1: 1600px;
+$md2: 992px;
+$md3: 768px;
+$md4: 480px;
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@import "ui.scss";
+@import "header.scss";
+@import "footer.scss";
+
+//#######################################################################################################
+.title {
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  span {
+    color: #ffbb00;
+  }
+  &__white {
+    color: #ffffff;
+  }
+  &__black {
+    color: #111111;
+  }
+}
+
+.sub-title {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #b2b2b2;
+}
+
+//#######################################################################################################
+.text-color {
+  &__gray {
+    color: #9c9c9c;
+    padding: 0 230px 0 0;
+    @media (max-width: 1180px) {
+      padding: 0 150px 0 0;
+    }
+    @media (max-width: $md4) {
+      padding: 0 100px 0 0;
+    }
+  }
+
+  &__orange {
+    color: #ffbb00;
+    padding: 0 236px 0 0;
+    @media (max-width: 1180px) {
+      padding: 0 156px 0 0;
+    }
+    @media (max-width: $md4) {
+      padding: 0 106px 0 0;
+    }
+  }
+}
+
+.button-serguros {
+  &__gray {
+    color: #cccccc;
+    background: #2e2e2e;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  &__orange {
+    color: #332200;
+    background: linear-gradient(180deg, #ffbf00 0%, #f2a50c 100%);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+}
+
+//#######################################################################################################
+.button-animation-120 {
+  display: flex;
+  align-self: flex-start;
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: all 1.2s ease 0.3s;
+  &._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.button-animation-160 {
+  display: flex;
+  align-self: flex-start;
+  transform: translate(0, 160%);
+  opacity: 0;
+  transition: all 1.2s ease 0.3s;
+  &._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

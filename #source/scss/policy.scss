@@ -1,0 +1,120 @@
+@import "common-styles.scss";
+
+//#######################################################################################################
+.termos {
+  background: #111111;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 60px 0;
+    @media (max-width: $md1) {
+      padding: 50px 0;
+    }
+    @media (max-width: 1200px) {
+      padding: 40px 10px;
+    }
+    @media (max-width: $md3) {
+      padding: 35px 10px;
+    }
+  }
+
+  &__header {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #b2b2b2;
+    @media (max-width: $md1) {
+      @include adaptive-value("font-size", 24, 18);
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.1s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    @media (max-width: $md1) {
+      @include adaptive-value("font-size", 64, 26);
+      @include adaptive-value("line-height", 72, 24);
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.2s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+//#######################################################################################################
+.politica {
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 100px 0;
+    @media (max-width: 1440px) {
+      padding: 80px 0;
+    }
+    @media (max-width: 1200px) {
+      padding: 70px 10px;
+    }
+    @media (max-width: $md2) {
+      padding: 50px 10px;
+    }
+    @media (max-width: $md3) {
+      padding: 40px 10px;
+    }
+  }
+
+  &__body {
+    max-width: 760px;
+    padding: 0 0 48px 0;
+    @media (max-width: $md3) {
+      padding: 0 0 30px 0;
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    &:nth-child(1) {
+      font-family: $poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #111111;
+      padding: 0 0 20px 0;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      font-family: $roboto;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #2e2e2e;
+      padding: 0 0 20px 0;
+    }
+    &:last-child {
+      padding: 0;
+    }
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1.2s ease 0.1s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
